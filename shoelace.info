@@ -1,0 +1,39 @@
+; Theme Info --------------------------------------------------------------
+; required information about the theme
+
+name = ShoeLace
+description = Shoelace.
+screenshot = shoelace.png
+core = 7.x
+
+
+; Stylesheets  ------------------------------------------------------------
+
+; sites/all/modules/contrib/ctools/css/ctools.css
+; sites/all/modules/contrib/genpass/genpass.css
+; sites/all/modules/contrib/panels/css/panels.css
+; stylesheets[all][] = modules/system/system.base.css
+
+; OVERRIDE
+stylesheets[all][] = modules/system/system.menus.css
+stylesheets[all][] = modules/system/system.messages.css
+stylesheets[all][] = modules/system/system.theme.css
+
+; modules/comment/comment.css
+; sites/all/modules/contrib/date/date_api/date.css
+; sites/all/modules/contrib/date/date_popup/themes/datepicker.1.7.css
+; modules/field/theme/field.css
+; modules/node/node.css
+; modules/user/user.css
+; sites/all/modules/contrib/views/css/views.css
+
+; stylesheets[all][] = stylesheets/screen.css
+stylesheets[all][] = stylesheets/app.css
+stylesheets[all][] = stylesheets/style.css
+
+
+; Scripts  ----------------------------------------------------------------
+
+scripts[] = javascripts/foundation/modernizr.foundation.js
+
+

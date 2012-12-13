@@ -1,0 +1,76 @@
+#admin-menu {
+  top: -20px;
+}
+
+
+/** PIN **/
+/* Description */
+.field-name-field-details-public {
+  height: 200px;
+  overflow: auto;
+}
+/* Four Corners : Members */
+.view-pin-members .views-label {
+  color: #E89E2D;
+}
+.view-pin-members .views-field-field-person-photo {
+  float: left;
+  margin-right: 10px;
+}
+.view-pin-members .views-field-og-roles {
+  font-size: 14px;
+}
+.view-pin-members .views-field-field-name-first,
+.view-pin-members .views-field-field-name-last {
+  color: #214467;
+  font-size: 14px;
+}
+/* Hide CSS */
+.ui-tabs {
+  background: transparent;
+  border: none;
+}
+.ui-tabs .ui-widget-header {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #c0c0c0;
+  -moz-border-radius: 0px;
+  -webkit-border-radius: 0px;
+  border-radius: 0px;
+}
+.ui-tabs .ui-state-default {
+  background: transparent;
+  border: none;
+}
+.ui-tabs .ui-state-active {
+  background: transparent url("../images/uiTabsArrow.png") no-repeat scroll bottom center;
+  border: none;
+}
+.ui-tabs .ui-state-default a {
+  color: #1c6ea0;
+}
+.ui-tabs .ui-state-default a:hover {
+  color: #42a9be;
+}
+.ui-tabs .ui-state-active a {
+  color: #214467;
+}
+
+/*
+ * jQuery UI Tabs 1.8.7
+ *
+ * Copyright 2010, AUTHORS.txt (http://jqueryui.com/about)
+ * Dual licensed under the MIT or GPL Version 2 licenses.
+ * http://jquery.org/license
+ *
+ * http://docs.jquery.com/UI/Tabs#theming
+ */
+.ui-tabs { position: relative; padding: .2em; zoom: 1; } /* position: relative prevents IE scroll bug (element with position: relative inside container with overflow: auto appear as "fixed") */
+.ui-tabs .ui-tabs-nav { margin: 0; padding: .2em .2em 0; }
+.ui-tabs .ui-tabs-nav li { list-style: none; float: left; position: relative; top: 1px; margin: 0 .2em 1px 0; border-bottom: 0 !important; padding: 0; white-space: nowrap; }
+.ui-tabs .ui-tabs-nav li a { float: left; padding: .5em 1em; text-decoration: none; }
+.ui-tabs .ui-tabs-nav li.ui-tabs-selected { margin-bottom: 0; padding-bottom: 1px; }
+.ui-tabs .ui-tabs-nav li.ui-tabs-selected a, .ui-tabs .ui-tabs-nav li.ui-state-disabled a, .ui-tabs .ui-tabs-nav li.ui-state-processing a { cursor: text; }
+.ui-tabs .ui-tabs-nav li a, .ui-tabs.ui-tabs-collapsible .ui-tabs-nav li.ui-tabs-selected a { cursor: pointer; } /* first selector in group seems obsolete, but required to overcome bug in Opera applying cursor: text overall if defined elsewhere... */
+.ui-tabs .ui-tabs-panel { display: block; border-width: 0; padding: 1em 1.4em; background: none; }
+.ui-tabs .ui-tabs-hide { display: none !important; }

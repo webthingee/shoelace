@@ -1,0 +1,130 @@
+/* line 1, ../sass/partials/_admin-menu.scss */
+#admin-menu {
+  top: -20px; }
+
+/** PIN **/
+/* Description */
+/* line 8, ../sass/partials/_admin-menu.scss */
+.field-name-field-details-public {
+  height: 200px;
+  overflow: auto; }
+
+/* Four Corners : Members */
+/* line 13, ../sass/partials/_admin-menu.scss */
+.view-pin-members .views-label {
+  color: #E89E2D; }
+
+/* line 16, ../sass/partials/_admin-menu.scss */
+.view-pin-members .views-field-field-person-photo {
+  float: left;
+  margin-right: 10px; }
+
+/* line 20, ../sass/partials/_admin-menu.scss */
+.view-pin-members .views-field-og-roles {
+  font-size: 14px; }
+
+/* line 24, ../sass/partials/_admin-menu.scss */
+.view-pin-members .views-field-field-name-first,
+.view-pin-members .views-field-field-name-last {
+  color: #214467;
+  font-size: 14px; }
+
+/* Hide CSS */
+/* line 29, ../sass/partials/_admin-menu.scss */
+.ui-tabs {
+  background: transparent;
+  border: none; }
+
+/* line 33, ../sass/partials/_admin-menu.scss */
+.ui-tabs .ui-widget-header {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #c0c0c0;
+  -moz-border-radius: 0px;
+  -webkit-border-radius: 0px;
+  border-radius: 0px; }
+
+/* line 41, ../sass/partials/_admin-menu.scss */
+.ui-tabs .ui-state-default {
+  background: transparent;
+  border: none; }
+
+/* line 45, ../sass/partials/_admin-menu.scss */
+.ui-tabs .ui-state-active {
+  background: transparent url("../images/uiTabsArrow.png") no-repeat scroll bottom center;
+  border: none; }
+
+/* line 49, ../sass/partials/_admin-menu.scss */
+.ui-tabs .ui-state-default a {
+  color: #1c6ea0; }
+
+/* line 52, ../sass/partials/_admin-menu.scss */
+.ui-tabs .ui-state-default a:hover {
+  color: #42a9be; }
+
+/* line 55, ../sass/partials/_admin-menu.scss */
+.ui-tabs .ui-state-active a {
+  color: #214467; }
+
+/*
+ * jQuery UI Tabs 1.8.7
+ *
+ * Copyright 2010, AUTHORS.txt (http://jqueryui.com/about)
+ * Dual licensed under the MIT or GPL Version 2 licenses.
+ * http://jquery.org/license
+ *
+ * http://docs.jquery.com/UI/Tabs#theming
+ */
+/* line 68, ../sass/partials/_admin-menu.scss */
+.ui-tabs {
+  position: relative;
+  padding: .2em;
+  zoom: 1; }
+
+/* position: relative prevents IE scroll bug (element with position: relative inside container with overflow: auto appear as "fixed") */
+/* line 69, ../sass/partials/_admin-menu.scss */
+.ui-tabs .ui-tabs-nav {
+  margin: 0;
+  padding: .2em .2em 0; }
+
+/* line 70, ../sass/partials/_admin-menu.scss */
+.ui-tabs .ui-tabs-nav li {
+  list-style: none;
+  float: left;
+  position: relative;
+  top: 1px;
+  margin: 0 .2em 1px 0;
+  border-bottom: 0 !important;
+  padding: 0;
+  white-space: nowrap; }
+
+/* line 71, ../sass/partials/_admin-menu.scss */
+.ui-tabs .ui-tabs-nav li a {
+  float: left;
+  padding: .5em 1em;
+  text-decoration: none; }
+
+/* line 72, ../sass/partials/_admin-menu.scss */
+.ui-tabs .ui-tabs-nav li.ui-tabs-selected {
+  margin-bottom: 0;
+  padding-bottom: 1px; }
+
+/* line 73, ../sass/partials/_admin-menu.scss */
+.ui-tabs .ui-tabs-nav li.ui-tabs-selected a, .ui-tabs .ui-tabs-nav li.ui-state-disabled a, .ui-tabs .ui-tabs-nav li.ui-state-processing a {
+  cursor: text; }
+
+/* line 74, ../sass/partials/_admin-menu.scss */
+.ui-tabs .ui-tabs-nav li a, .ui-tabs.ui-tabs-collapsible .ui-tabs-nav li.ui-tabs-selected a {
+  cursor: pointer; }
+
+/* first selector in group seems obsolete, but required to overcome bug in Opera applying cursor: text overall if defined elsewhere... */
+/* line 75, ../sass/partials/_admin-menu.scss */
+.ui-tabs .ui-tabs-panel {
+  display: block;
+  border-width: 0;
+  padding: 1em 1.4em;
+  background: none; }
+
+/* line 76, ../sass/partials/_admin-menu.scss */
+.ui-tabs .ui-tabs-hide {
+  display: none !important; }
