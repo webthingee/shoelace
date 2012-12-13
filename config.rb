@@ -26,4 +26,4 @@ color_output = false
 # sass-convert -R --from scss --to sass sass scss && rm -rf sass && mv scss sass
 preferred_syntax = :scss
 
-sass_options = (environment == :development && firesass == true) ? {:debug_info => true} : {}
+#sass_options = (environment == :development && firesass == true) ? {:debug_info => true} : {}
