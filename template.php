@@ -33,9 +33,19 @@ function shoelace_preprocess_html(&$variables, $hook) {
 }
 
 function shoelace_preprocess_page(&$variables) {
-  // Get the entire main menu tree
+  /* Main Menu */
+  // // Get the entire main menu tree
   $main_menu_tree = menu_tree_all_data('main-menu');
-
   // Add the rendered output to the $main_menu_expanded variable
   $variables['main_menu_expanded'] = shoelace_tree_output($main_menu_tree);
+
+  $variables['main_content_count'] = 'twelve';
+  $variables['sidebar_content_count'] = 'four';
+
+  if ($variables['page']['sidebar_second']) {
+    $variables['main_content_count'] = 'eight';
+    //$variables['sidebar_content_count'] = 'four';
+  }
+
+  dsm($variables);
 }
