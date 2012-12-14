@@ -24,7 +24,10 @@
             </ul>
 
             <section>
-              <?php print theme('links__system_main_menu', array('links' => $main_menu, 'attributes' => array('id' => 'main-menu', 'class' => array('left', 'clearfix')), 'heading' => NULL)); ?>
+              <ul class="left">
+                <?php print render($main_menu_expanded); ?>
+              </ul>
+
               <ul class="right">
                 <li class="divider show-for-medium-and-up"></li>
                 <li class="has-dropdown">
