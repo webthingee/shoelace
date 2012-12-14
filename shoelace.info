@@ -28,12 +28,17 @@ stylesheets[all][] = modules/system/system.theme.css
 ; sites/all/modules/contrib/views/css/views.css
 
 ; stylesheets[all][] = stylesheets/screen.css
-stylesheets[all][] = stylesheets/app.css
+stylesheets[all][] = stylesheets/foundation.min.css
 stylesheets[all][] = stylesheets/style.css
 
 
 ; Scripts  ----------------------------------------------------------------
 
-scripts[] = javascripts/foundation/modernizr.foundation.js
+; scripts[] = javascripts/foundation/jquery.js
+
+scripts[] = javascripts/foundation/foundation.min.js
+; @todo: currently foundation.min.js is preventing wysiwyg from loading.
+
+scripts[] = javascripts/foundation/app.js
 
 
