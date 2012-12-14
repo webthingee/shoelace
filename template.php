@@ -47,5 +47,5 @@ function shoelace_preprocess_page(&$variables) {
     //$variables['sidebar_content_count'] = 'four';
   }
 
-  dsm($variables);
+  //dsm($variables);
 }
