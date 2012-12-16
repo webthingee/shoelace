@@ -40,9 +40,10 @@ function shoelace_preprocess_page(&$variables) {
   $variables['main_menu_expanded'] = shoelace_tree_output($main_menu_tree);
 
   $variables['main_content_count'] = 'twelve';
-  $variables['sidebar_content_count'] = 'four';
+  $variables['sidebar_first_content_count'] = 'four';
+  $variables['sidebar_second_content_count'] = 'four';
 
-  if ($variables['page']['sidebar_second'] || $variables['page']['sidebar_second']) {
+  if ($variables['page']['sidebar_first'] || $variables['page']['sidebar_second']) {
     $variables['main_content_count'] = 'eight';
     //$variables['sidebar_content_count'] = 'four';
   }

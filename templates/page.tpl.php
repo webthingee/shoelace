@@ -84,7 +84,7 @@
       <?php if ($title): ?><h1 class="title" id="page-title"><?php print $title; ?></h1><?php endif; ?>
       <?php print render($title_suffix); ?>
       
-      <div id="content" class="<?php print $main_content_count; ?> columns column"><div class="section">
+      <div id="content" class="<?php print $main_content_count; ?> columns"><div class="section">
         <?php if ($page['highlighted']): ?><div id="highlighted"><?php print render($page['highlighted']); ?></div><?php endif; ?>
         <a id="main-content"></a>
         <?php if ($tabs): ?><div class="tabs"><?php print render($tabs); ?></div><?php endif; ?>
@@ -95,13 +95,13 @@
       </div></div> <!-- /.section, /#content -->
 
       <?php if ($page['sidebar_first']): ?>
-        <div id="sidebar-first" class="column sidebar"><div class="section">
+        <div id="sidebar-first" class="<?php print $sidebar_first_content_count; ?> columns sidebar"><div class="section">
           <?php print render($page['sidebar_first']); ?>
         </div></div> <!-- /.section, /#sidebar-first -->
       <?php endif; ?>
 
       <?php if ($page['sidebar_second']): ?>
-        <div id="sidebar-second" class="column four columns sidebar"><div class="section">
+        <div id="sidebar-second" class="<?php print $sidebar_second_content_count; ?> columns sidebar"><div class="section">
           <?php print render($page['sidebar_second']); ?>
         </div></div> <!-- /.section, /#sidebar-second -->
       <?php endif; ?>
