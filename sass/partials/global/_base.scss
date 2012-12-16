@@ -1,0 +1,39 @@
+/**
+ * Media Query Breakpoints
+ */
+@import "zen";
+@import "mixins";
+
+@mixin breakpoint($point) {
+  @if $point == tall {
+    @media only screen and (min-width: 480px) { 
+      $zen-column-count:  1;
+      $zen-gutter-width:  0;
+      @content; }
+  }
+  @if $point == grande {
+    @media only screen and (min-width: 768px) { 
+      $zen-column-count:  12;
+      $zen-gutter-width:  60px;
+      $baseFont: 14;
+      @content; }
+  }
+  @if $point == grandeonly {
+    @media only screen and (min-width: 768px) and (max-width: 959px) { 
+      $zen-column-count:  12;
+      $zen-gutter-width:  60px;
+      @content; }
+  }
+  @if $point == venti{
+    @media only screen and (min-width: 960px) { 
+      $zen-column-count:  12;
+      $zen-gutter-width:  60px;
+      @content; }
+  }
+  @else if $point == trenta {
+    @media only screen and (min-width: 1080px) {
+      $zen-column-count:  12;
+      $zen-gutter-width:  60px;    
+      @content; }
+  }
+}

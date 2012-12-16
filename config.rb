@@ -1,10 +1,12 @@
 # Require any additional compass plugins here.
 require "zurb-foundation"
+require 'zen-grids'
 
 # Set this to the root of your project when deployed:
 http_path = "/"
 css_dir = "stylesheets"
 sass_dir = "sass"
+extensions_dir  = "sass/sass-extensions"
 images_dir = "images"
 javascripts_dir = "javascripts"
 fonts_dir = "fonts"

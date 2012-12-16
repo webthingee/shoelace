@@ -1,0 +1,93 @@
+@import "base";
+
+.zg-views-4 {
+  .view-content {
+    $zen-column-count:  1;
+    $zen-gutter-width:  10px;
+    @include zen-grid-container;
+    position: relative;
+    
+    .views-row {
+      @include zen-grid-item(1, 1);
+      @include zen-clear(left);
+    }
+   
+    @include breakpoint(tall) {
+      $zen-column-count:  2;
+      $zen-gutter-width:  10px;
+      @include zen-views-row-grid($zen-column-count);
+    }
+    
+    @include breakpoint(grande) {
+      $zen-column-count:  3;
+      $zen-gutter-width:  10px;
+      @include zen-views-row-grid($zen-column-count);
+    }
+   
+    @include breakpoint(venti) {
+      $zen-column-count:  4;
+      $zen-gutter-width:  10px;
+      @include zen-views-row-grid($zen-column-count);
+    }
+  }
+}
+
+.zg-views-3 {
+  .view-content {
+    $zen-column-count:  1;
+    $zen-gutter-width:  10px;
+    @include zen-grid-container;
+    position: relative;
+    
+    .views-row {
+      @include zen-grid-item(1, 1);
+      @include zen-clear(left);
+    }
+   
+    @include breakpoint(tall) {
+      $zen-column-count:  2;
+      $zen-gutter-width:  10px;
+      @include zen-views-row-grid($zen-column-count);
+    }
+   
+    @include breakpoint(venti) {
+      $zen-column-count:  3;
+      $zen-gutter-width:  10px;
+      @include zen-views-row-grid($zen-column-count);
+    }
+  }
+}
+
+.zg-views-2 {
+  .view-content {
+    $zen-column-count:  1;
+    $zen-gutter-width:  10px;
+    @include zen-grid-container;
+    position: relative;
+    
+    .views-row {
+      @include zen-grid-item(1, 1);
+      @include zen-clear(left);
+    }
+   
+    @include breakpoint(tall) {
+      $zen-column-count:  2;
+      $zen-gutter-width:  10px;
+      @include zen-views-row-grid($zen-column-count);
+    }
+  }
+}
+
+.zg-views-1 {
+  .view-content {
+    $zen-column-count:  1;
+    $zen-gutter-width:  10px;
+    @include zen-grid-container;
+    position: relative;
+    
+    .views-row {
+      @include zen-grid-item(1, 1);
+      @include zen-clear(left);
+    }
+  }
+}

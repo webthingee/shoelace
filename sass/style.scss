@@ -1,5 +1,9 @@
-@import "partials/global/panel_tabs";
+@import "partials/global/base";
 
+@import "partials/global/layout";
+@import "partials/global/responsive";
+
+@import "partials/global/panel-tabs";
 @import "partials/module/admin-menu";
 
 @import "partials/node/pin";
