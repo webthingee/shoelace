@@ -24,15 +24,13 @@
             </ul>
 
             <section>
-              <ul class="left">
-                <?php print render($main_menu_expanded); ?>
-              </ul>
-
+              <?php print render($main_menu_expanded); ?>
               <ul class="right">
                 <li class="divider show-for-medium-and-up"></li>
                 <li class="has-dropdown">
-                <a href="#">User Menu</a>
-                <?php print theme('links__system_secondary_menu', array('links' => $secondary_menu, 'attributes' => array('id' => 'secondary-menu', 'class' => array('dropdown')), 'heading' => NULL)); ?>
+                  <a href="#">User Menu</a>
+                  <?php print theme('links__system_secondary_menu', array('links' => $secondary_menu, 'attributes' => array('id' => 'secondary-menu', 'class' => array('dropdown')), 'heading' => NULL)); ?>
+                  </li>
               </ul>
             </section>
           </nav>

@@ -5,3 +5,13 @@
     font-size: 10px;
   }
 }
+
+@import "sassy-buttons";
+
+.pane-node-create-links {
+  a {
+    width: 100%;
+    // text-align: center;
+    @include sassy-button("simple", 0, 1em, #333, #444);
+  }
+}

@@ -1,0 +1,23 @@
+ul {
+  list-style: none;
+  list-style-type: none;
+  margin: 0;
+
+  li {
+    list-style: none;
+    list-style-type: none;
+    line-height: inherit;
+    padding: 0;
+  }
+}
+
+ol {
+  margin: 16px;
+  padding: 0;
+  list-style-position: inside;
+
+  li {
+    margin-left: 5px;
+    line-height: inherit;
+  }
+}

@@ -1,8 +1,6 @@
 <?php
-
 /**
- * Include Once for initialization of elements for twitter bootstrap markup,
- * look and feel.
+ * Include Once for initialization of elements for markup.
  */
 include_once(drupal_get_path('theme', 'shoelace') . '/includes/breadcrumb.inc');
 include_once(drupal_get_path('theme', 'shoelace') . '/includes/error.inc');
@@ -34,19 +32,33 @@ function shoelace_preprocess_html(&$variables, $hook) {
 
 function shoelace_preprocess_page(&$variables) {
   /* Main Menu */
-  // // Get the entire main menu tree
-  $main_menu_tree = menu_tree_all_data('main-menu');
+  // Get the entire main menu tree
+  $mmt = menu_tree_all_data('main-menu');
   // Add the rendered output to the $main_menu_expanded variable
-  $variables['main_menu_expanded'] = shoelace_tree_output($main_menu_tree);
+  $variables['main_menu_expanded'] = shoelace_dropdown_tree_output($mmt);
 
+  // sidebars layout via Foundation markup.
   $variables['main_content_count'] = 'twelve';
   $variables['sidebar_first_content_count'] = 'four';
   $variables['sidebar_second_content_count'] = 'four';
 
   if ($variables['page']['sidebar_first'] || $variables['page']['sidebar_second']) {
     $variables['main_content_count'] = 'eight';
-    //$variables['sidebar_content_count'] = 'four';
   }
+  if ($variables['page']['sidebar_first'] && $variables['page']['sidebar_second']) {
+    $variables['main_content_count'] = 'four';
+  }
+  // kpr($variables);
+}
 
-  //dsm($variables);
+/**
+ * Implementation of hook_theme().
+ */
+function shoelace_theme(&$existing, $type, $theme, $path) {
+  // Functions provided by our theme.
+  return array(
+    'top_main_menu' => array(
+      'render element' => 'tree',
+    ),
+  );
 }

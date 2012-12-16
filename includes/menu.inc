@@ -3,18 +3,13 @@
  * Overrides theme_menu_tree().
  **/
 function shoelace_menu_tree($variables) {
-  //looking for first elements to wrap their group in a dropdown ul.
-  if (strstr($variables['tree'], 'first')) {
-    return '<ul class="dropdown">' . $variables['tree'] . '</ul>';
-  }
-  // default implementation;
-  return '<ul class="menu">' . $variables['tree'] . '</ul>';
+  return '<ul class="nav-bar vertical">' . $variables['tree'] . '</ul>';
 }
 
 /**
  * Overrides theme_links() for system_main_menu.
  */
-function shoelace_tree_output($tree) {
+function shoelace_dropdown_tree_output($tree) {
   $build = array();
   $items = array();
 
@@ -29,6 +24,9 @@ function shoelace_tree_output($tree) {
   $router_item = menu_get_item();
   $num_items = count($items);
   foreach ($items as $i => $data) {
+
+    //kpr($data);
+
     $class = array();
     if ($i == 0) {
       $class[] = 'first';
@@ -67,10 +65,17 @@ function shoelace_tree_output($tree) {
     $element['#title'] = $data['link']['title'];
     $element['#href'] = $data['link']['href'];
     $element['#localized_options'] = !empty($data['link']['localized_options']) ? $data['link']['localized_options'] : array();
-    $element['#below'] = $data['below'] ? shoelace_tree_output($data['below']) : $data['below'];
+    $element['#below'] = $data['below'] ? shoelace_dropdown_tree_output($data['below']) : $data['below'];
     $element['#original_link'] = $data['link'];
     // Index using the link's unique mlid.
     $build[$data['link']['mlid']] = $element;
+
+    // add a variable to check if we need to wrap as parent item.
+    $data['parent_level'] = '';
+    if ($data['link']['depth'] == 1) {
+      $data['parent_level'] = TRUE;
+    }
+    
   }
   if ($build) {
     // Make sure drupal_render() does not re-order the links.
@@ -80,7 +85,33 @@ function shoelace_tree_output($tree) {
     $build['#theme_wrappers'][] = 'menu_tree__' . strtr($data['link']['menu_name'], '-', '_');
   }
 
+  // send parent item to shoelace_top_main_menu() via theme wrapper
+  // theme registered in template.php
+  if ($data['parent_level']) {
+    $build['#theme_wrappers'][] = 'top_main_menu';
+  }
   return $build;
+}
+
+/**
+ * Implements theme_main_menu().
+ * basic main_menu theme call, unless called via shoelace_dropdown();
+ */
+function shoelace_menu_tree__main_menu($variables) {  
+  //looking for first elements to wrap their group in a dropdown ul.
+  if (strstr($variables['tree'], 'first') && (!(strstr($variables['tree'], 'collapsed')))) {
+    return '<ul class="dropdown">' . $variables['tree'] . '</ul>';
+  }
+  // default implementation;
+  return '<ul class="nav-bar vertical">' . $variables['tree'] . '</ul>';
+}
+
+/**
+ * Implements theme_main_menu().
+ * called for main_menu via shoelace_dropdown();
+ */
+function shoelace_top_main_menu($variables) {
+  return '<ul class="left">' . $variables['tree']['#children'] . '</ul>';
 }
 
 /**
