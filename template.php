@@ -42,7 +42,7 @@ function shoelace_preprocess_page(&$variables) {
   $variables['main_content_count'] = 'twelve';
   $variables['sidebar_content_count'] = 'four';
 
-  if ($variables['page']['sidebar_second']) {
+  if ($variables['page']['sidebar_second'] || $variables['page']['sidebar_second']) {
     $variables['main_content_count'] = 'eight';
     //$variables['sidebar_content_count'] = 'four';
   }
