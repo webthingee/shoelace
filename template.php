@@ -5,6 +5,8 @@
 include_once(drupal_get_path('theme', 'shoelace') . '/includes/breadcrumb.inc');
 include_once(drupal_get_path('theme', 'shoelace') . '/includes/error.inc');
 include_once(drupal_get_path('theme', 'shoelace') . '/includes/menu.inc');
+include_once(drupal_get_path('theme', 'shoelace') . '/includes/pager.inc');
+
 // include_once(drupal_get_path('theme', 'shoelace') . '/includes/css.inc');
 
 /**
