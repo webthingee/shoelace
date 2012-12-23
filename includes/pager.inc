@@ -72,7 +72,7 @@ function shoelace_pager($variables) {
         if ($i == $pager_current) {
           $items[] = array(
             'class' => array('current'), 
-            'data' => theme('pager_previous', array('text' => $i, 'element' => $element, 'interval' => ($pager_current - $i), 'parameters' => $parameters)),
+            'data' => theme('pager_next', array('text' => $i, 'element' => $element, 'interval' => ($pager_current - $i), 'parameters' => $parameters)),
           );
         }
         if ($i > $pager_current) {
@@ -102,7 +102,7 @@ function shoelace_pager($variables) {
         'data' => $li_last,
       );
     }
-    return '<h2 class="element-invisible">' . t('Pages') . '</h2>' . theme('item_list', array(
+    return '<h3 class="element-invisible">' . t('Pages') . '</h3>' . theme('item_list', array(
       'items' => $items, 
       'attributes' => array('class' => array('pagination')),
     ));
